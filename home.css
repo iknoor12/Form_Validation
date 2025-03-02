@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(to right, #21649e, #00aefe96); */
+    background: linear-gradient(to top, #386db3, #f3b9a9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: rgb(3, 3, 3);
+    text-align: center;
+}
+
+.home-image {
+    background: url('blue-mountain.jpg') no-repeat center center/cover;
+    background-size: 1000px;
+    border-radius: 15px;
+}
+
+.home-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding-top: 60px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
+    width: 1000px;
+    height: 500px;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background: #ff7eb3;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background: #ff5277;
+}

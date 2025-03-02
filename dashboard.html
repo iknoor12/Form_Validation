@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome, <span id="username">User</span>!</h1>
+        <p>You have successfully logged in.</p>
+        <button onclick="logoutUser()" class="btn">Logout</button>
+    </div>
+
+    <script>
+        // Fetch user details from localStorage
+        function loadDashboard() {
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+            let currentUserEmail = localStorage.getItem("currentUser");
+
+            let user = users.find(user => user.email === currentUserEmail);
+
+            if (user) {
+                document.getElementById("username").textContent = user.name;
+            } else {
+                alert("Unauthorized access! Redirecting to Login...");
+                window.location.href = "index.html";
+            }
+        }
+
+        function logoutUser() {
+            localStorage.removeItem("currentUser");
+            alert("Logged out successfully!");
+            window.location.href = "home.html";
+        }
+
+        // Load user data on page load
+        loadDashboard();
+    </script>
+</body>
+</html>
