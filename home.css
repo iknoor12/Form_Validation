@@ -10,6 +10,7 @@ body {
     color: rgb(3, 3, 3);
     text-align: center;
 }
+/* example image css add */
 
 .home-image {
     background: url('blue-mountain.jpg') no-repeat center center/cover;
